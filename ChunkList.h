@@ -5,9 +5,6 @@ using namespace std;
 
 const int ARRAY_SIZE = 8;
 
-class FullStackError {};
-class EmptyStackError {};
-
 template<class ItemType>
 struct ChunkArray
 {
@@ -260,9 +257,9 @@ inline void ChunkList<ItemType>::Remove(ItemType elem)
 				return;
 			}
 
-			// implemented code from lecture on how to delete 
-			// a node from a link list
-									
+			
+			
+			// delete a node from a link list
 			else if (find_element->chunk[i] == elem) {
 			
 					previous->next = find_element->next;
@@ -294,29 +291,5 @@ inline void ChunkList<ItemType>::Remove(ItemType elem)
 template<class ItemType>
 inline bool ChunkList<ItemType>::IsEmpty()
 {
-
-	//ChunkArray<ItemType>* increment = head;
-	//while (increment != nullptr) {
-	//	increment->values;
-	//	break;
-	//}
-	//// values holds the node count it will return true or false based 
-	//// on what is in values
-	//if (increment == nullptr) {
-	//	cerr << "list is empty" << endl;
-	//	return true;
-	//}
-	//else { return false; }
-
 	return ChunkList::GetLength() == 0;
-
-	// i want to catch the error the exception for increment = nullptr 	
-//	return increment->values == 0;
-
-
-
-
-
-
-
 }
